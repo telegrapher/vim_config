@@ -121,7 +121,7 @@ set showmatch
 set splitbelow
 set splitright
 
-" Easier movement between split buffers
+" Easier movement between split buffers, this overwrites C+L(redraw)
 nnoremap <C-j> <C-W><C-J>
 nnoremap <C-k> <C-W><C-K>
 nnoremap <C-l> <C-W><C-L>
@@ -130,8 +130,11 @@ nnoremap <C-h> <C-W><C-H>
 " Incremental search and highlight results
 set incsearch
 set hlsearch
+
 " Remap Ctrl+L to delete highlight + redraw
-nnoremap <silent> <C-L> :noh<return><C-L>
+" nnoremap <silent> <C-l> :noh<return><C-l>
+" Since C+L is used, let's remap to C+\.
+nnoremap <C-\> :execute 'noh \| redraw'<cr>
 
 set guifont=Fantasque\ Sans\ Mono\ 13
 
@@ -160,6 +163,18 @@ au FileType go nmap <leader>i <Plug>(go-install)
 " No need to save before building with GoBuild
 set autowrite
 
+" Extra hightlights for Go
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
 
+" Hightligth all instances of current variable
+let g:go_auto_sameids = 1
 
-
+" Show variable types
+let g:go_auto_type_info = 1
