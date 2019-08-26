@@ -181,6 +181,8 @@ let g:go_auto_type_info = 1
 
 " Folding
 " zc close zo open za toggle
+" zC and ZO affect recursively
+" zR open all zM close all
 set foldmethod=syntax
 
 
