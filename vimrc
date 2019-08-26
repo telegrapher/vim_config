@@ -178,3 +178,9 @@ let g:go_auto_sameids = 1
 
 " Show variable types
 let g:go_auto_type_info = 1
+
+" Folding
+" zc close zo open za toggle
+set foldmethod=syntax
+
+
