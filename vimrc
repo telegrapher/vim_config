@@ -179,6 +179,9 @@ let g:go_auto_sameids = 1
 " Show variable types
 let g:go_auto_type_info = 1
 
+" Stop resetting folding at file save
+let g:go_fmt_experimental = 1
+
 " Folding
 " zc close zo open za toggle
 " zC and ZO affect recursively
