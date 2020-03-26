@@ -188,4 +188,6 @@ let g:go_fmt_experimental = 1
 " zR open all zM close all
 set foldmethod=syntax
 
-
+" Tabs gt, gT 1gt
+" t open tab in nerdtree
+" T open tab in bg
