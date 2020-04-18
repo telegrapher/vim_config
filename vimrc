@@ -122,10 +122,10 @@ set splitbelow
 set splitright
 
 " Easier movement between split buffers, this overwrites C+L(redraw)
-nnoremap <C-j> <C-W><C-J>
-nnoremap <C-k> <C-W><C-K>
-nnoremap <C-l> <C-W><C-L>
-nnoremap <C-h> <C-W><C-H>
+"nnoremap <C-j> <C-W><C-J>
+"nnoremap <C-k> <C-W><C-K>
+"nnoremap <C-l> <C-W><C-L>
+"nnoremap <C-h> <C-W><C-H>
 
 " Incremental search and highlight results
 set incsearch
