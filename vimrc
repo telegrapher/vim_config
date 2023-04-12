@@ -1,71 +1,47 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
 set encoding=utf-8            " required by YouCompleteMe
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
+" Run PlugInstall if there are missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
+
+call plug#begin('~/.vim/bundle/')
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'valloric/YouCompleteMe'             " Advanced completion
-Plugin 'powerline/powerline'                " Advanced powerline
+" Plug 'junegunn/vim-plug'
+Plug 'powerline/powerline'                " Advanced powerline
 
-Plugin 'scrooloose/nerdtree'                " NERDTree file browser
-Plugin 'scrooloose/syntastic'               " Syntax checker
-Plugin 'tpope/vim-fugitive'                 " Git integration
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'ctrlpvim/ctrlp.vim'                 " Advanced search
-Plugin 'csexton/trailertrash.vim'           " Trailing spaces
-Plugin 'elzr/vim-json'                      " JSON
-Plugin 'GutenYe/json5.vim'                  " JSON5
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'scrooloose/nerdtree'                " NERDTree file browser
+Plug 'scrooloose/syntastic'               " Syntax checker
+Plug 'tpope/vim-fugitive'                 " Git integration
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'ctrlpvim/ctrlp.vim'                 " Advanced search
+Plug 'csexton/trailertrash.vim'           " Trailing spaces
+Plug 'elzr/vim-json'                      " JSON
+Plug 'GutenYe/json5.vim'                  " JSON5
 
-Plugin 'rodjek/vim-puppet'                  " Puppet language support
-Plugin 'fatih/vim-go'                       " Go support
+Plug 'rodjek/vim-puppet'                  " Puppet language support
+Plug 'fatih/vim-go'                       " Go support
 
-Plugin 'vim-scripts/wombat256.vim'          " Color profile
-Plugin 'nanotech/jellybeans.vim'            " Color profile
-Plugin 'morhetz/gruvbox'                    " Color profile
-Plugin 'w0ng/vim-hybrid'                    " Color profile
-Plugin 'sjl/badwolf'                        " Color profile
-Plugin 'chriskempson/base16'                " Color profile
-Plugin 'chriskempson/tomorrow-theme'        " Color profile
-Plugin 'zeis/vim-kolor'                     " Color profile
+Plug 'vim-scripts/wombat256.vim'          " Color profile
+Plug 'nanotech/jellybeans.vim'            " Color profile
+Plug 'morhetz/gruvbox'                    " Color profile
+Plug 'w0ng/vim-hybrid'                    " Color profile
+Plug 'sjl/badwolf'                        " Color profile
+Plug 'chriskempson/base16'                " Color profile
+Plug 'chriskempson/tomorrow-theme'        " Color profile
+Plug 'zeis/vim-kolor'                     " Color profile
 
-" Vunde help I keep pasted here, useful when I edit the .vimrc file
-"
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-" Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-" Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-" Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Avoid a name conflict with L9
-" Plugin 'user/L9', {'name': 'newL9'}
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()            " required
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
 "
 " Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+" :PlugInstall
+" :PlugUpdate
 "
-" see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
 " Nerdtree configuration
