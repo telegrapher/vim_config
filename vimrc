@@ -6,9 +6,10 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
 
+" Plug picks plugins from the old Vundle directory
 call plug#begin('~/.vim/bundle/')
-" let Vundle manage Vundle, required
 
+" Reminder of vim-plug usage
 " Plug 'junegunn/vim-plug'
 Plug 'powerline/powerline'                " Advanced powerline
 
@@ -144,6 +145,7 @@ let g:go_highlight_build_constraints = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_structs = 1
@@ -157,6 +159,10 @@ let g:go_auto_type_info = 1
 
 " Stop resetting folding at file save
 let g:go_fmt_experimental = 1
+
+" Auto formatting and importing
+let g:go_fmt_autosave = 1
+let g:go_fmt_command = "goimports"
 
 " Folding
 " zc close zo open za toggle
