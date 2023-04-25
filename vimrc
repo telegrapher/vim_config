@@ -23,6 +23,7 @@ Plug 'ctrlpvim/ctrlp.vim'                 " Advanced search
 Plug 'csexton/trailertrash.vim'           " Trailing spaces
 Plug 'elzr/vim-json'                      " JSON
 Plug 'GutenYe/json5.vim'                  " JSON5
+Plug 'pedrohdz/vim-yaml-folds'            " Improve vim folding
 
 Plug 'rodjek/vim-puppet'                  " Puppet language support
 Plug 'fatih/vim-go'                       " Go support
