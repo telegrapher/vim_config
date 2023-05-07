@@ -130,6 +130,10 @@ set clipboard=unnamedplus
 " Avoid auto-concealing in JSON files
 let g:vim_json_syntax_conceal = 0
 
+" Bash script, needs shellcheck installed in the machine
+let g:syntastic_sh_shellcheck_args="-x -o all"
+let g:syntastic_sh_checkers=['shellcheck']
+
 " Go specific changes
 let mapleader=","
 au FileType go nmap <leader>r <Plug>(go-run)
