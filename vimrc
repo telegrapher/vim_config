@@ -11,31 +11,31 @@ call plug#begin('~/.vim/bundle/')
 
 " Reminder of vim-plug usage
 " Plug 'junegunn/vim-plug'
-Plug 'powerline/powerline'                " Advanced powerline
+Plug 'powerline/powerline'                              " Advanced powerline
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'scrooloose/nerdtree'                " NERDTree file browser
-Plug 'scrooloose/syntastic'               " Syntax checker
-Plug 'tpope/vim-fugitive'                 " Git integration
+Plug 'scrooloose/nerdtree'                              " NERDTree file browser
+Plug 'scrooloose/syntastic'                             " Syntax checker
+Plug 'tpope/vim-fugitive'                               " Git integration
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'ctrlpvim/ctrlp.vim'                 " Advanced search
-Plug 'csexton/trailertrash.vim'           " Trailing spaces
-Plug 'elzr/vim-json'                      " JSON
-Plug 'GutenYe/json5.vim'                  " JSON5
-Plug 'pedrohdz/vim-yaml-folds'            " Improve vim folding
+Plug 'ctrlpvim/ctrlp.vim'                               " Advanced search
+Plug 'csexton/trailertrash.vim'                         " Trailing spaces
+Plug 'elzr/vim-json'                                    " JSON
+Plug 'GutenYe/json5.vim'                                " JSON5
+Plug 'pedrohdz/vim-yaml-folds'                          " Improve vim folding
 
-Plug 'rodjek/vim-puppet'                  " Puppet language support
-Plug 'fatih/vim-go'                       " Go support
+Plug 'rodjek/vim-puppet'                                " Puppet language support
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries'}       " Go support
 
-Plug 'vim-scripts/wombat256.vim'          " Color profile
-Plug 'nanotech/jellybeans.vim'            " Color profile
-Plug 'morhetz/gruvbox'                    " Color profile
-Plug 'w0ng/vim-hybrid'                    " Color profile
-Plug 'sjl/badwolf'                        " Color profile
-Plug 'chriskempson/base16'                " Color profile
-Plug 'chriskempson/tomorrow-theme'        " Color profile
-Plug 'zeis/vim-kolor'                     " Color profile
+Plug 'vim-scripts/wombat256.vim'                        " Color profile
+Plug 'nanotech/jellybeans.vim'                          " Color profile
+Plug 'morhetz/gruvbox'                                  " Color profile
+Plug 'w0ng/vim-hybrid'                                  " Color profile
+Plug 'sjl/badwolf'                                      " Color profile
+Plug 'chriskempson/base16'                              " Color profile
+Plug 'chriskempson/tomorrow-theme'                      " Color profile
+Plug 'zeis/vim-kolor'                                   " Color profile
 
 call plug#end()            " required
 " To ignore plugin indent changes, instead use:
