@@ -178,3 +178,7 @@ set foldmethod=syntax
 " Tabs gt, gT 1gt
 " t open tab in nerdtree
 " T open tab in bg
+
+" Try netrw using Nerdtree
+let NerdTreeHijackNetrw=1
+
